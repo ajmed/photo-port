@@ -9,12 +9,10 @@ describe('About component', () => {
     it('renders', () => {
         render(<ContactForm />)
     })
-
     it('matches snapshot DOM node structure', () => {
         const { asFragment } = render(<ContactForm />)
         expect(asFragment()).toMatchSnapshot()
     })
-
     it('shows contact form header', () => {
         const {getByTestId} = render(<ContactForm />)
         expect(getByTestId('h1tag')).toHaveTextContent('Contact me')
